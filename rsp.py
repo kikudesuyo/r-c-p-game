@@ -1,10 +1,13 @@
 import random
 comp = [1,2,3]
 quit_number = int()
+string = input("input rock, paper or scissors: ")
+# string の条件式を訂正する。
+while string != "rock" and string != "paper" and string != "scissors": 
+        string = input("only input rock, paper or scissors: ")
+print("end1")
 while quit_number < 10:
         computer_hand = random.choice(comp)
-        print(computer_hand)
-        string = input("input rock, paper or scissors: ")
         print("your hand is " + string)
         dict_player = {"rock": 1, "paper": 2, "scissors": 3}
         player_hand = dict_player[string]
@@ -16,6 +19,7 @@ while quit_number < 10:
                 print("computer hand is:" + str(dict_comp[computer_hand]))
                 print("draw")
                 quit_number = 5
+                string = input("input rock, paper or scissors: ")
         elif test == 1:
                 print("computer hand is:" + str(dict_comp[computer_hand]))
                 print("you win")
