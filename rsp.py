@@ -25,4 +25,4 @@ while quit_number < 10:
                 print("you lose")
                 quit_number = 15
 print('End')
-# あいこだった場合を考える
+# rock,paper,scissors 以外入力されたときを考える。if文を使う。
