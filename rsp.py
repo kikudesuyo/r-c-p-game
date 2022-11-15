@@ -14,7 +14,7 @@ while quit_string == "continue":
     dict_computer = {1:"rock", 2:"paper", 3:"scissors"}
     result = player_hand - computer_hand
     if result < 0:
-      result = result + 3         
+      result = result + 3
     if result == 0:
       print("computer hand is:" + str(dict_computer[computer_hand]))
       print("draw")
@@ -24,7 +24,7 @@ while quit_string == "continue":
       print("computer hand is:" + str(dict_computer[computer_hand]))
       print("you win")
       quit_string = "quit"
-    else:               
+    else:
       print("computer hand is:" + str(dict_computer[computer_hand]))
       print("you lose")
       quit_string = "quit"
