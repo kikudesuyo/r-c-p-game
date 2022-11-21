@@ -1,4 +1,6 @@
 import random
+from util import is_player_hand
+
 comp = [1,2,3]
 quit_string = "continue"
 string = str()
@@ -29,3 +31,8 @@ while quit_string == "continue":
       print("you lose")
       quit_string = "quit"
 print('End')
+
+# playerの入力
+# 相手の手を選ぶ
+# 勝利判定
+# 結果の表示
