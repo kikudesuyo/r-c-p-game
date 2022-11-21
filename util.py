@@ -27,19 +27,22 @@ def convert_oppnenthand_to_number():
   return get_oppnent_number
   
 # 勝利判定
-def judge_win_or_lose():
-  result =  convert_playerhand_to_number() - convert_oppnenthand_to_number()
-  if result < 0:
-    result = result + 3
-  if result == 0:
-    print("computer hand is:" + str(get_opponent_hand()))
-    print("draw")
-    get_player_hand()
-  elif result == 1:
-    print("computer hand is:" + str(get_opponent_hand()))
-    print("you win")
-  else:
-    print("computer hand is:" + str(get_opponent_hand()))
-    print("you lose")
-    
+def get_result(player_hand, opponent_hand):
+  hand_num_table = {"rock": 1, "paper": 2, "scissors": 3}
+  player = hand_num_table[player_hand]
+  opponent = hand_num_table[opponent_hand]
+  difference = player - opponent if player - opponent >= 0 else player - opponent +3
+  while difference == 0:
+    if difference == 0:
+      print("computer hand is: " + opponent_hand)
+      print("draw")
+      get_player_hand()
+    if difference == 1:
+      print("computer hand is: " + opponent_hand)
+      print("you win")
+    if difference == 2:
+      print("computer hand is:" + opponent_hand)
+      print("you lose")
+          
+  
 # 結果の表示
