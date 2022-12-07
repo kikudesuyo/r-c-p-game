@@ -15,23 +15,13 @@ def get_opponent_hand():
   return opponent_hand
 
 
-def get_result(player_hand, opponent_hand):
+def get_winner(player_hand, opponent_hand):
   """ 勝利判定"""
   hand_num_table = {"rock": 1, "paper": 2, "scissors": 3}
   player = hand_num_table[player_hand]
   opponent = hand_num_table[opponent_hand]
   difference = player - opponent if player - opponent >= 0 else player - opponent +3
-  while difference == 0:
-    if difference == 0:
-      print("computer hand is: " + opponent_hand)
-      print("draw")
-      get_player_hand()
-    if difference == 1:
-      print("computer hand is: " + opponent_hand)
-      print("you win")
-    if difference == 2:
-      print("computer hand is:" + opponent_hand)
-      print("you lose")
-          
-  
+  winner = { 0:"null", 1: "player", 2: "opponent"}
+  return winner[difference]
+
 # 結果の表示
