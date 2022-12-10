@@ -1,3 +1,4 @@
-from util import get_result
+from util import display_result
 
-get_result("scissors","rock") 
+display_result()
+  
