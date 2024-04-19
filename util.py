@@ -23,7 +23,7 @@ def get_opponent_hand():
     return opponent_hand
 
 
-def get_winner(player_hand, opponent_hand):
+def judge_winner(player_hand, opponent_hand):
     """勝利判定
 
     Return:
