@@ -41,9 +41,9 @@ def display_result(winner):
 
     if winner == None:
         print("draw")
-    if winner == "player":
+    elif winner == "player":
         print("you win")
-    if winner == "opponent":
+    elif winner == "opponent":
         print("you lose")
 
 
