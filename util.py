@@ -51,13 +51,13 @@ def display_input():
     """入力する手と相手の手を表示
 
     Ruturn:
-    hand_list(list): 自分と相手の手をリスト化
+    hands(list): 自分と相手の手をリスト化
 
     """
 
     player_hand = get_player_hand()
     opponent_hand = get_opponent_hand()
-    hand_list = [player_hand, opponent_hand]
+    hands = [player_hand, opponent_hand]
     print("your hand is :" + player_hand)
     print("opponent hand is: " + opponent_hand)
-    return hand_list
+    return hands
