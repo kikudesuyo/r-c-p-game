@@ -1,19 +1,23 @@
 import random
 
 
+def is_valid_hand(hand):
+    is_input_valid = hand in ["rock", "paper", "scissors"]
+    return is_input_valid
+
+
 def get_player_hand():
     """playerの入力"""
-
     is_input_valid = False
     while not is_input_valid:
         hand = input("Enter rock, paper or scissors: ")
-        is_input_valid = hand in ["rock", "paper", "scissors"]
+        if is_valid_hand(hand):
+            is_input_valid = True
     return hand
 
 
 def get_opponent_hand():
     """敵の手を選ぶ"""
-
     random_str = ["rock", "paper", "scissors"]
     opponent_hand = random.choice(random_str)
     return opponent_hand
@@ -27,7 +31,6 @@ def get_winner(player_hand, opponent_hand):
     difference(int): じゃんけんの判定値
 
     """
-
     hand_num_table = {"rock": 1, "paper": 2, "scissors": 3}
     player = hand_num_table[player_hand]
     opponent = hand_num_table[opponent_hand]
@@ -38,7 +41,6 @@ def get_winner(player_hand, opponent_hand):
 
 def display_result(winner):
     """結果の表示"""
-
     if winner == None:
         print("draw")
     elif winner == "player":
@@ -54,7 +56,6 @@ def display_input():
     hands(list): 自分と相手の手をリスト化
 
     """
-
     player_hand = get_player_hand()
     opponent_hand = get_opponent_hand()
     hands = [player_hand, opponent_hand]
