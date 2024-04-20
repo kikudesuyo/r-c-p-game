@@ -1,4 +1,4 @@
-from ui import View
+from view import View
 
 
 def main():
