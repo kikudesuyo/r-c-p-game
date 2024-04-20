@@ -1,7 +1,10 @@
-from util import display_input, display_result, judge_winner
+from ui import View
 
-winner = None
-while not winner:
-    player_hand, opponent_hand = display_input()
-    winner = judge_winner(player_hand, opponent_hand)
-    display_result(winner)
+
+def main():
+    view = View()
+    view.start_game()
+
+
+if __name__ == "__main__":
+    main()
