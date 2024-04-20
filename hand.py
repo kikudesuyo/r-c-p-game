@@ -26,12 +26,6 @@ class Paper(Hand):
 
 class Rule:
 
-    def judge(self, hand: Hand, *hands: Hand):
-        all_hands = [hand, *hands]
-        if self.is_draw(all_hands):
-            return None
-        return self.get_winnner_hand(all_hands)
-
     def is_draw(self, hands: list[Hand]):
         types = len(set(hands))
         has_all_hands = types == 3
@@ -46,7 +40,3 @@ class Rule:
             return Scissors
         if (Paper in types) and (Rock in types):
             return Paper
-
-
-unti = Rule()
-print(unti.judge(Rock(), Rock()))
