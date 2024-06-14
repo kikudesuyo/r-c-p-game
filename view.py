@@ -4,6 +4,9 @@ from controller import Opponent, Result, User
 class View:
     def input_hand(self):
         hand = input("Enter rock , paper or scissors:")
+        if hand not in ["rock", "paper", "scissors"]:
+            print("Invalid input")
+            return self.input_hand()
         print("")
         return hand
 
